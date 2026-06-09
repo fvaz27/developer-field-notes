@@ -1,3 +1,23 @@
+# Developer Field Notes
+
+A personal reference site I built to keep track of Git commands, habits, and reminders I actually use during bootcamp.
+
+## Live Site
+
+[View deployed site](https://fvaz27.github.io/developer-field-notes)
+
+## Features
+
+- Breaks down the difference between Git and GitHub
+- Covers the daily workflow: edit, stage, commit, push
+- Lists essential Git commands with real examples
+- Covers what not to commit and why it matters
+
+## What I Learned
+
+Staging is its own step — just because a file exists in your folder does not mean Git is tracking it. You have to explicitly add it before it becomes part of a commit.
+
+
 ## Git Practice Evidence
 
 ### git log --oneline
