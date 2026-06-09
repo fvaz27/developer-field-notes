@@ -1,0 +1,69 @@
+<!DOCTYPE html> <!--Declaring the document type. This tells the browser to use modern standards mode. -->
+<html lang="en"> <!--Every HTML document needs one root element(everything lives inside it) lang="en" attribute is there so that screen readers know which language to use when reading the page aloud. Also so tools like google translate know what language to translate from-->
+    <head><!--before displaying anything we add facts the browser needs to know before displaying anything-->
+        <meta charset="UTF-8" /> <!--set the character encoding. UTF-8 covers every character in almost every language plus symbols and emoji. Without it, certain characters will show as different symbols-->
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" /> <!--this controls how the page scales on mobile devices. So if we have this then we can scale the page on the phone so that it is readable and not display as if it were on dektop-->
+        <title>Developer Field Notes</title> <!--This is the text that is shown on the browser tab. Its a short description that shows up in browser history, bookmarks, and search results-->
+        <link rel="stylesheet" href="styles.css" /> <!--this connects out css file to the html file.. rel="stylesheet" tells the browser what kind of file it is so it knows how to use it-->
+    </head>
+    <body>
+
+        <header> <!--This marks the top section of the page, <div< also works but <headers> are used by screen readers as landmarks so visually impaired users can jump straight to it.-->
+            <h1>Develo[er Field Notes</h1> <!--There should only be one h1 and also it is the most important piece of text on the page. skipping heading levels like <h1> to <h4> breaks the outline and hurts accessibility. Screen readers use headings to let users jump around the page without reading everything. -->
+            <p>Getting familiar with Git commands, forming good habits, and reminders.</p>
+        </header>
+
+        <main> <!--This wraps the main content. Screen readers have a kip to main contect shortcut that jumps directly to this elemet which is important for people who dont want to listen to the nav bar read aloud on every single pafe they visit-->
+
+            <section id="git-vs-github"> <!--groups related content with a unique identifier. It says everything in here belongs together under one topic and the id attribute gives that section a unique name in the document meaning we can link directly to it and also it lets css and js tartget that specidic section without affecting others-->
+                <h2>Git vs Github</h2>
+                <p>
+                    <strong>Git</strong> is a version control tool that runs locally on your computer. It tracks changes to your files,
+                    lets you create snapshots called commitsm and allows you to work across branches (all without internet connection)
+                </p>
+                <p>
+                    <strong>GitHub</strong> is a cloud-based platform that hosts Git repositories online. It lets you back up your work,
+                    work with others, open pull requests, and review code. GitHub uses Git but Git can exist without GitHub
+                </p>
+                <p>Git is a <strong>tool</strong>. GitHub is the <strong>hosting service</strong></p>
+
+            </section>
+
+            <section id="daily-loop">
+                <h2>The Daily Loop</h2> <!--subheading that is one level below <h1>. <h2> is a major topic but not as important as our page title-->
+                <p>Every working session follows the same four steps:</p>
+                <ol> <!--ordered list(numbered) and ul is unordered list(bullets)-->
+                    <li><strong>Edit</strong> - make changes to your files in the working directory.</li> <!-- <li> a list item, either a bullet or number depending on the parent list type-->
+                    <li><strong>Stage</strong> - use <code>git add</code> to move changes to the staging area.</li> <!--<code> inline code formatting-->
+                    <li><strong>Commit</strong> - <code>git commit</code> to save a snapshot to your local repository.</li>
+                    <li><strong>Push</strong> - use <code>git push</code> to send you commits to the remote on GitHub.</li>
+                </ol>
+            </section>
+
+            <section id="commands">
+                <h2>Git Command Reference</h2>
+                <ul>
+                    <li><code>git init</code> - initialized a new Git repository in the current folder.</li>
+                    <li><code>git status</code> - shows which files are modified, staged or untracked.</li>
+                    <li><code>git add . </code> or <code>git add [filename(s)]</code> - stages changes so they will be included in the next commit.
+                        Use <code>.</code> to stage everything at once, or specify a filename to stage one file at a time.
+                    </li>
+                    <li><code>git commit -m "message"</code> - saves a snapshot of the staged changes with a descriptive message.</li>
+                    <li><code>git push</code> - uploads local commits to the remote repositry on Github</li>
+                    <li><code>git pull</code> - fetches and merges the latest changes from the remote into your current branch.</li>
+                    <li><code>git checkout -b [branch name]</code> or the newer way <code>git switch -c (branch name)</code>- it creates a new branch and switches to it immediately.</li>
+                    <li><code>git log --oneline</code> - shows a compact history of commits, one line each.</li>
+                    <li><code>git diff</code> - shows the exact line by line changes not yet staged.</li>
+                    <li><code>git merge [branch name]</code> - merges the specified branch into your current branch.</li>
+                    <li><code>git restore filename</code> — discards changes in the working directory and reverts the file back to its last committed state.</li> 
+                </ul>
+            </section>
+
+        </main>
+
+        <footer> <!--screen readers recognize this as the bottom of the page landmark. Usually where the author information is-->
+            <p>Made by fvaz27</p>
+        </footer>
+
+    </body>
+</html>
