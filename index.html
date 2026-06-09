@@ -59,6 +59,18 @@
                 </ul>
             </section>
 
+            <section id="do-not-commit">
+                <h2>Things I should not commit</h2>
+                <p>Some files should never be tracked by Git because they contain sensitive information or are auto-generated and unnecessary to share.</p>
+                <ul>
+                    <li><code>.env</code> — contains environment variables and secrets like API keys and database passwords. Never commit this.</li>
+                    <li><code>node_modules/</code> — auto-generated folder containing all installed packages. It can be recreated with <code>npm install</code> so there is no reason to commit it.</li>
+                    <li><code>.DS_Store</code> — a hidden file Mac creates automatically in every folder. It has nothing to do with your project.</li>
+                    <li>Secrets and passwords — if a secret is pushed to a public repo, consider it leaked immediately. Rotate/Switch it.</li>
+                </ul>
+                <p>All of these are listed in the <code>.gitignore</code> file so Git ignores them automatically.</p>
+            </section>
+
         </main>
 
         <footer> <!--screen readers recognize this as the bottom of the page landmark. Usually where the author information is-->
