@@ -1,0 +1,116 @@
+/* reset default browser margin and padding on all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* base page styles — font, color, spacing */
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: black;
+  background-color: white;
+  padding: 2rem 1rem;
+}
+
+/* site header — centered with a bottom border to separate it from content */
+header {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  border-bottom: 2px solid black;
+  padding-bottom: 1rem;
+}
+
+/* main page title */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+/* subtitle text inside the header */
+header p {
+  color: gray;
+}
+
+/* main content area — centered and capped at 720px so lines don't get too long */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* spacing between each section */
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* subheadings — left border accent to make them stand out */
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid black;
+  padding-left: 0.6rem;
+}
+
+/* paragraph spacing */
+p {
+  margin-bottom: 0.75rem;
+}
+
+/* indent ordered and unordered lists */
+ol,
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* spacing between list items */
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* inline code styling — light gray background so commands stand out */
+code {
+  background-color: white;
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* site footer — separated from content with a top border */
+footer {
+  max-width: 720px;
+  margin: 3rem auto 0;
+  border-top: 1px solid whitesmoke;
+  padding-top: 1rem;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+/* ── mobile styles — applies when screen is 600px wide or less ── */
+@media (max-width: 600px) {
+
+  /* reduce padding and font size on small screens */
+  body {
+    padding: 1rem 0.75rem;
+    font-size: 15px;
+  }
+
+  /* shrink main heading so it doesn't overflow on phones */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* shrink subheadings slightly for mobile */
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  /* shrink code text and force long commands to wrap */
+  code {
+    font-size: 0.85em;
+    word-break: break-word;
+  }
+
+}
